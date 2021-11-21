@@ -1,22 +1,19 @@
-/** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
-import { useState } from "react";
-import Register from "../components/Register";
+import { useState, useEffect } from "react";
+import Splash from "../components/Splash";
 import Login from "../components/Login";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-	const [registeredUser, setRegisteredUser] = useState(
-		localStorage.getItem("registered") || false
-	);
+	const [splash, setSplash] = useState(true);
+	let navigate = useNavigate();
 
-	console.log(registeredUser);
-	return (
-		<>
-			<h2>this is the home view</h2>
+	useEffect(() => {
+		setTimeout(() => {
+			setSplash(false);
+		}, 1500);
+	}, []);
 
-			{registeredUser ? <Login /> : <Register />}
-		</>
-	);
+	return <>{splash ? <Splash /> : <Login />}</>;
 };
 
 export default Home;

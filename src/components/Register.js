@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthContext";
 
 const Login = () => {
@@ -36,52 +37,63 @@ const Login = () => {
 			<h1>Registrer dig som bruger</h1>
 
 			<form onSubmit={handleSubmit(onSubmit)}>
-				<label htmlFor="username">Navn:</label>
-				<input
-					type="text"
-					name="username"
-					id="username"
-					{...register("username")}
-				/>
+				<div className="formgroup">
+					<label htmlFor="username">Navn:</label>
+					<input
+						type="text"
+						name="username"
+						id="username"
+						{...register("username")}
+					/>
+				</div>
+				<div className="formgroup">
+					<label htmlFor="email">E-mail:</label>
+					<input
+						type="email"
+						name="email"
+						id="email"
+						{...register("email")}
+					/>
+				</div>
+				<div className="formgroup">
+					<label htmlFor="password">Password</label>
+					<input
+						type="password"
+						name="password"
+						id="password"
+						{...register("password")}
+					/>
+				</div>
+				<div className="formgroup">
+					<label htmlFor="password2">Password</label>
+					<input
+						type="password"
+						name="password2"
+						id="password2"
+						{...register("password2")}
+					/>
+				</div>
+				<div className="formgroup">
+					<label htmlFor="spouse">Ægtefælle / Kæreste:</label>
+					<input
+						type="text"
+						name="spouse"
+						id="spouse"
+						{...register("spouse")}
+					/>
+					<p>
+						Hvis du indtaster din ægtefælle eller kærestes navn i
+						dette felt, sikrer du dig imod at trække ham eller
+						hende.
+					</p>
+				</div>
 
-				<label htmlFor="email">E-mail:</label>
-				<input
-					type="email"
-					name="email"
-					id="email"
-					{...register("email")}
-				/>
-
-				<label htmlFor="password">Password</label>
-				<input
-					type="password"
-					name="password"
-					id="password"
-					{...register("password")}
-				/>
-
-				<label htmlFor="password2">Password</label>
-				<input
-					type="password"
-					name="password2"
-					id="password2"
-					{...register("password2")}
-				/>
-
-				<label htmlFor="spouse">Ægtefælle / Kæreste:</label>
-				<input
-					type="text"
-					name="spouse"
-					id="spouse"
-					{...register("spouse")}
-				/>
-				<p>
-					Hvis du indtaster din ægtefælle eller kærestes navn i dette
-					felt, sikrer du dig imod at trække ham eller hende.
-				</p>
-
-				{registerError ? <p>{registerError}</p> : null}
-				<button type="submit">Log in</button>
+				{registerError ? (
+					<div className="formgroup">
+						<p>{registerError}</p>
+					</div>
+				) : null}
+				<button type="submit">Opret bruger og log ind</button>
 			</form>
 		</div>
 	);
