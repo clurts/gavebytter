@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthContext";
 
 const Login = () => {
