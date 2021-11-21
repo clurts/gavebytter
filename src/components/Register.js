@@ -64,7 +64,7 @@ const Login = () => {
 					/>
 				</div>
 				<div className="formgroup">
-					<label htmlFor="password2">Password</label>
+					<label htmlFor="password2">Gentag password</label>
 					<input
 						type="password"
 						name="password2"
