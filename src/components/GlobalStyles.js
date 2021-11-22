@@ -18,6 +18,7 @@ const GlobalStyles = () => {
 					background-image: url("/background.jpg");
 					background-position: top center;
 					background-size: auto;
+					background-color: rgb(12, 12, 12);
 				}
 				h1 {
 					font-family: "Merienda", cursive;
