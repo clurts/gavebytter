@@ -30,38 +30,38 @@ const GlobalStyles = () => {
 				}
 				form,
 				.centered {
-					max-width: 25em;
-					padding: 0 2em;
+					max-width: 25rem;
+					padding: 0 2rem;
 					margin: 0 auto;
 					box-sizing: border-box;
 					display: block;
 				}
 				.formgroup {
-					margin-bottom: 1.5em;
+					margin-bottom: 1.5rem;
 				}
 				input {
-					padding: 0.5em;
-					font-size: 1em;
+					padding: 0.5rem;
+					font-size: 1rem;
 					display: block;
-					margin: 0.5em 0;
+					margin: 0.5rem 0;
 					box-sizing: border-box;
 					width: 100%;
 				}
 				label {
 					display: block;
-					margin-bottom: 0.25em;
+					margin-bottom: 0.25rem;
 					color: whitesmoke;
 				}
 
 				.button,
 				button[type="submit"] {
-					font-size: 1em;
+					font-size: 1rem;
 					font-weight: bold;
 					display: inline-block;
-					padding: 0.5em;
-					border-radius: 0.25em;
+					padding: 0.5rem;
+					border-radius: 0.25rem;
 					background-color: white;
-					margin-right: 1em;
+					margin-right: 1rem;
 					border: none;
 					text-decoration: none;
 					color: black;
@@ -69,7 +69,7 @@ const GlobalStyles = () => {
 
 				p {
 					font-size: 1.125rem;
-					margin-top: 0.5em;
+					margin-top: 0.5rem;
 					color: whitesmoke;
 				}
 				a {
@@ -79,11 +79,11 @@ const GlobalStyles = () => {
 				textarea {
 					display: block;
 					width: 100%;
-					height: 20em;
+					height: 20rem;
 					resize: none;
-					font-size: 1em;
+					font-size: 1rem;
 					line-height: 1.5;
-					padding: 0.5em;
+					padding: 0.5rem;
 					box-sizing: border-box;
 					font-family: Arial, Helvetica, sans-serif;
 				}

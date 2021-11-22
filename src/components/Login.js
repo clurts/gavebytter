@@ -40,7 +40,7 @@ const Login = () => {
 					/>
 				</div>
 				<div className="formgroup">
-					<label htmlFor="password">Password</label>
+					<label htmlFor="password">Password:</label>
 					<input
 						type="password"
 						name="password"
@@ -55,10 +55,7 @@ const Login = () => {
 				) : null}
 				<button type="submit">Log ind</button>
 			</form>
-			<p
-				className="centered"
-				style={{ padding: "0 3.5rem", marginTop: "3rem" }}
-			>
+			<p className="centered" style={{ marginTop: "3rem" }}>
 				Har du aldrig været her før?
 				<br />
 				<Link to="/register">Registrér dig her!</Link>
