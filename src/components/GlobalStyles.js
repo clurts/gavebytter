@@ -14,7 +14,7 @@ const GlobalStyles = () => {
 						"Droid Sans", "Helvetica Neue", sans-serif;
 					-webkit-font-smoothing: antialiased;
 					-moz-osx-font-smoothing: grayscale;
-					color: red;
+					color: whitesmoke;
 					background-image: url("/background.jpg");
 					background-position: top center;
 					background-size: auto;
@@ -51,7 +51,6 @@ const GlobalStyles = () => {
 				label {
 					display: block;
 					margin-bottom: 0.25rem;
-					color: whitesmoke;
 				}
 
 				.button,
@@ -68,10 +67,10 @@ const GlobalStyles = () => {
 					color: black;
 				}
 
-				p {
+				p,
+				li {
 					font-size: 1.125rem;
 					margin-top: 0.5rem;
-					color: whitesmoke;
 				}
 				a {
 					color: white;

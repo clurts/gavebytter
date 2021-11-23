@@ -1,10 +1,21 @@
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import { AuthContext } from "../contexts/AuthContext";
 import { Link } from "react-router-dom";
 
 const ToBuyFor = () => {
 	const { username, buyforName, buyforList, logout } =
 		useContext(AuthContext);
+	const [theList, setTheList] = useState([]);
+
+	useEffect(() => {
+		if (buyforList) {
+			let list = buyforList.split("\n");
+			let newlist = list.filter((item) => item !== "");
+			setTheList(newlist);
+		}
+	}, [buyforList]);
+
+	theList && console.log(theList);
 
 	return (
 		<div className="centered">
@@ -23,7 +34,7 @@ const ToBuyFor = () => {
 			{buyforName && buyforList ? (
 				<>
 					<p>{buyforName} ønsker sig:</p>
-					<p>{buyforList}</p>
+					<ul>{theList && theList.map((item) => <li>{item}</li>)}</ul>
 				</>
 			) : null}
 			<p>
