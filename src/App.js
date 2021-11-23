@@ -5,11 +5,13 @@ import ToBuyFor from "./components/ToBuyFor";
 import GlobalStyles from "./components/GlobalStyles";
 import Wishlist from "./components/wishlist";
 import Register from "./components/Register";
+import MyPWAPrompt from "./components/MyPWAPrompt";
 
 function App() {
 	return (
 		<AuthContextProvider>
 			<GlobalStyles />
+			<MyPWAPrompt />
 			<div className="App">
 				<Routes>
 					<Route path="/" element={<Home />} />
