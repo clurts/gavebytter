@@ -11,7 +11,7 @@ const Splash = () => {
 			<h1 style={{ fontSize: "4em", textAlign: "center" }}>
 				Julegaver
 				<br />
-				2021
+				2022
 			</h1>
 		</div>
 	);
