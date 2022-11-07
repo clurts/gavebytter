@@ -10,9 +10,11 @@ const Login = () => {
 	const { register, handleSubmit } = useForm();
 	const { login } = useContext(AuthContext);
 	const [loginError, setLoginError] = useState();
+	const [isSubmitting, setIsSubmitting] = useState(false);
 	const toastId = useRef(null);
 
 	const onSubmit = (data) => {
+		setIsSubmitting(true);
 		toastId.current = toast.loading("Logger ind...", {
 			theme: "dark",
 		});
@@ -65,7 +67,9 @@ const Login = () => {
 						<p>{loginError}</p>
 					</div>
 				) : null}
-				<button type="submit">Log ind</button>
+				<button type="submit" disabled={isSubmitting}>
+					Log ind
+				</button>
 			</form>
 			<p className="centered" style={{ marginTop: "3rem" }}>
 				Har du aldrig været her før?
