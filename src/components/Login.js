@@ -1,15 +1,21 @@
 import axios from "axios";
 import { useForm } from "react-hook-form";
-import { useContext, useState } from "react";
+import { useContext, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthContext";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
 	const { register, handleSubmit } = useForm();
 	const { login } = useContext(AuthContext);
 	const [loginError, setLoginError] = useState();
+	const toastId = useRef(null);
 
 	const onSubmit = (data) => {
+		toastId.current = toast.loading("Logger ind...", {
+			theme: "dark",
+		});
 		axios
 			.post("https://presentswap.herokuapp.com/auth/local", data)
 			.then((response) => {
@@ -17,6 +23,12 @@ const Login = () => {
 					setLoginError(null);
 					login(response.data);
 				}
+				toast.update(toastId.current, {
+					render: "Velkommen!",
+					type: "success",
+					isLoading: false,
+					autoClose: 1500,
+				});
 			})
 			.catch((error) => {
 				setLoginError(
