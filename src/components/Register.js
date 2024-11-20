@@ -13,7 +13,7 @@ const Login = () => {
 		if (data.password === data.password2) {
 			axios
 				.post(
-					"https://presentswap.herokuapp.com/auth/local/register",
+					"https://present-swap-api.onrender.com/auth/local/register",
 					data
 				)
 				.then((response) => {
