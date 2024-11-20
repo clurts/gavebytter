@@ -19,7 +19,7 @@ const Login = () => {
 			theme: "dark",
 		});
 		axios
-			.post("https://presentswap.herokuapp.com/auth/local", data)
+			.post("https://present-swap-api.onrender.com/auth/local", data)
 			.then((response) => {
 				if (response.status === 200) {
 					setLoginError(null);
