@@ -13,7 +13,7 @@ const Wishlist = () => {
 
 	const onSubmit = (data) => {
 		axios
-			.put(`https://presentswap.herokuapp.com/users/${userId}`, data, {
+			.put(`https://present-swap-api.onrender.com/users/${userId}`, data, {
 				headers: {
 					Authorization: "Bearer " + token,
 				},
